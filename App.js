@@ -5,7 +5,7 @@ import 'babel-preset-react-native-web3/globals';
 
 import HDWalletProvider from 'truffle-hdwallet-provider';
 
-import { TabNavigator } from 'react-navigation';
+import { createMaterialTopTabNavigator } from 'react-navigation';
 
 import Web3 from 'web3';
 
@@ -51,7 +51,7 @@ export default class App extends React.PureComponent<{}> {
 		);
 	}
 }
-const AppNavigation = TabNavigator(
+const AppNavigation = createMaterialTopTabNavigator(
 	{
 		Main: { screen: MainScreen },
 		Setup: { screen: SetupScreen },
